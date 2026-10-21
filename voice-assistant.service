@@ -1,0 +1,18 @@
+[Unit]
+Description=Suite Modular de Asistente de Voz, Dictado Inteligente e Intercomunicador
+After=network.target sound.target docker.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/antsanch/voice-assistant
+ExecStart=/home/antsanch/voice-assistant/.venv/bin/python3 /home/antsanch/voice-assistant/main.py
+Restart=always
+RestartSec=5
+
+# Variables de entorno para sesión gráfica X11 y servidor de sonido PipeWire
+Environment="DISPLAY=:1"
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=default.target

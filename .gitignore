@@ -1,0 +1,32 @@
+# Entorno virtual de Python
+.venv/
+env/
+venv/
+ENV/
+
+# Modelos binarios pesados (se descargan automáticamente mediante install.sh)
+models/*.onnx
+models/*.onnx.json
+models/vosk-model-*/
+bin/piper/
+
+# Archivos de audio cacheados (se generan con generate_sounds.py)
+sounds/*.wav
+!sounds/.gitkeep
+
+# Configuración local e información sensible
+.env
+.lgtv_auth.json
+
+# Bytecode y temporales de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Temporales del sistema
+.DS_Store
+*.swp
+*.swo
+*~

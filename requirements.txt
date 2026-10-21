@@ -1,0 +1,18 @@
+# Dependencias Python para la Suite de Asistente de Voz, Intercomunicador y Control Multimedia
+# Todas las librerías han sido seleccionadas para garantizar compatibilidad con arquitecturas x86_64
+# sin requerir instrucciones AVX obligatorias (compatibles con SSE4.1 para el Nodo A Core 2 Duo).
+
+# Reconocimiento de voz ultraligero y captura de audio
+vosk>=0.3.45
+pyaudio>=0.2.14
+
+# Solicitudes HTTP y configuración de entorno
+requests>=2.31.0
+python-dotenv>=1.0.1
+
+# Extracción limpia de artículos web y eliminación de ruido HTML
+trafilatura>=1.12.0
+
+# Control multimedia de red local (Chromecast y LG webOS)
+pychromecast>=14.0.0
+pywebostv>=0.8.4
